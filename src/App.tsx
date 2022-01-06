@@ -6,7 +6,7 @@ import Signup from 'pages/signup/signup';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/short-vid">
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
