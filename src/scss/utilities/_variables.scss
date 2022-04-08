@@ -1,0 +1,88 @@
+* {
+  --c-primary-hue: 216;
+  --c-accent-hue: 40;
+
+  // Light
+  --c-primary-light: hsl(var(--c-primary-hue) 65% 54%);
+  --c-accent-light: hsl(var(--c-accent-hue) 65% 54%);
+
+  --c-bg1-light: hsl(var(--c-primary-hue) 0% 100%);
+  --c-bg2-light: hsl();
+  --c-bg3-light: hsl();
+
+  // Dark
+  --c-primary-dark: hsl(var(--c-primary-hue) 90% 61%);
+  --c-accent-dark: hsl(var(--c-accent-hue) 65% 54%);
+
+  --c-bg1-dark: hsl(var(--c-primary-hue) 6% 6%);
+  --c-bg2-dark: hsl(var(--c-primary-hue) 6% 11%);
+  --c-bg3-dark: hsl(var(--c-primary-hue) 6% 17%);
+
+  // Black
+  --c-primary-black: hsl(var(--c-primary-hue) 79% 52%);
+  --c-accent-black: hsl(var(--c-accent-hue) 65% 54%);
+
+  --c-bg1-black: hsl(0 0% 0%);
+  --c-bg2-black: hsl();
+  --c-bg3-black: hsl();
+}
+
+// Default Color Scheme
+:root {
+  color-scheme: light;
+
+  --c-primary: var(--c-primary-light);
+  --c-accent: var(--c-accent-light);
+
+  --c-bg1: var(--c-bg1-light);
+  --c-bg2: var(--c-bg2-light);
+  --c-bg3: var(--c-bg3-light);
+}
+
+// Color Scheme from System Preference
+@media (prefer-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --c-primary: var(--c-primary-dark);
+    --c-accent: var(--c-accent-dark);
+
+    --c-bg1: var(--c-bg1-dark);
+    --c-bg2: var(--c-bg2-dark);
+    --c-bg3: var(--c-bg3-dark);
+  }
+}
+
+// User Preferred Color Schemes
+[color-scheme='light'] {
+  color-scheme: light;
+
+  --c-primary: var(--c-primary-light);
+  --c-accent: var(--c-accent-light);
+
+  --c-bg1: var(--c-bg1-light);
+  --c-bg2: var(--c-bg2-light);
+  --c-bg3: var(--c-bg3-light);
+}
+
+[color-scheme='dark'] {
+  color-scheme: dark;
+
+  --c-primary: var(--c-primary-dark);
+  --c-accent: var(--c-accent-dark);
+
+  --c-bg1: var(--c-bg1-dark);
+  --c-bg2: var(--c-bg2-dark);
+  --c-bg3: var(--c-bg3-dark);
+}
+
+[color-scheme='black'] {
+  color-scheme: dark;
+
+  --c-primary: var(--c-primary-black);
+  --c-accent: var(--c-accent-black);
+
+  --c-bg1: var(--c-bg1-black);
+  --c-bg2: var(--c-bg2-black);
+  --c-bg3: var(--c-bg3-black);
+}
